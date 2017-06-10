@@ -23,7 +23,7 @@ var bio = {
 	"welcomeMessage": "Welcome to my resume",
 	"biopic": "images/fry.jpg"
 };
-var education = {
+var education = { 
 	"schools": [{
 		"name": "Rutgers University",
 		"location": "New Brunswick",

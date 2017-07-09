@@ -12,7 +12,7 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
+var HTMLheaderName = '<h1 id="name">'+bio.name+'</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
@@ -29,18 +29,30 @@ var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+// var HTMLworkStart = '<div class="work-entry"></div>';
+function workComp(job){
+var HTMLworkEmployer = '<a href="#">'+work.jobs[job].employer;
+var HTMLworkTitle = ' - '+work.jobs[job].title+'</a>';
+var HTMLworkDates = '<div class="date-text">'+work.jobs[job].dates+'</div>';
+var HTMLworkLocation = '<div class="location-text">'+work.jobs[job].location+'</div>';
+var HTMLworkDescription = '<p><br>'+work.jobs[job].description+'</p>';
+return '<div class="work-entry">'+HTMLworkEmployer+HTMLworkTitle+HTMLworkDates+HTMLworkLocation+HTMLworkDescription+'</div>';
+}
 
+projects.display = function(pro){
+  var HTMLprojectTitle = '<a href="#">'+projects.projects[pro].title+'</a>';
+  var HTMLprojectDates = '<div class="date-text">'+projects.projects[pro].dates+'</div>';
+  var HTMLprojectDescription = '<p><br>'+projects.projects[pro].description+'</p>';
+  var HTMLprojectImage = ""
+;  if(projects.projects.hasOwnPropery == "image")
+   HTMLprojectImage = '<img src="'+projects.projects[pro].image+'">';
+  return '<div class="project-entry">' + HTMLprojectTitle + HTMLprojectDates + HTMLprojectDescription + HTMLprojectImage + '</div>';
+}
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+// var HTMLprojectTitle = '<a href="#">%data%</a>';
+// var HTMLprojectDates = '<div class="date-text">%data%</div>';
+// var HTMLprojectDescription = '<p><br>%data%</p>';
+// var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -68,6 +80,9 @@ $(document).ready(function() {
     var iName = inName($name.text()) || function(){};
     $name.html(iName);
   });
+
+
+
 });
 
 /*
@@ -87,6 +102,8 @@ function logClicks(x,y) {
 
 $(document).click(function(loc) {
   // your code goes here!
+  logClicks(loc.clientX,loc.clientY);
+    logClicks(loc.pageX,loc.pageY);
 });
 
 
@@ -239,11 +256,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
-  //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+window.addEventListener('resize', function(e) {
+  // Make sure the map bounds get updated on page resize
+ map.fitBounds(mapBounds);
+});

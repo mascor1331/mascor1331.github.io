@@ -49,7 +49,16 @@ var bio = {
 	"role": "Web Developer",
 	"welcomeMessage": "Welcome to my resume",
 	"biopic": "images/fry.jpg",
-  "contacts":{"location":"Mumbai"}
+  "contacts":{"location":"Harrison, NJ, USA",
+              "Mobile":"8482528677",
+              "Email":"mahesh.h@rutgers.edu",
+              "GitHub":"mascor1331",
+              "LinkedIn":"https://www.linkedin.com/in/mahesh13/"
+            },
+            "welcomeMessage": "Hello!",
+      "skills": ["A", "B"],
+      "biopic": "url",
+      "display": function(){}
 };
 var education = {
 	"schools": [{
@@ -81,7 +90,7 @@ $('#header').append(HTMLheaderName);
   // HTMLworkStart
   $('#workExperience').append(workComp(i));
 
-  $('#map').append(googleMap);
+  $('#mapDiv').append(googleMap);
 }
 
 //projects
@@ -90,7 +99,10 @@ for(var i=0; i< projects.projects.length;i++){
 $('#projects').append(projects.display(i));
 }
 
-
+for(contact in bio.contacts){
+  if(contact!="location")
+$('#footerContacts').append("<li>"+contact+" : "+bio.contacts[contact]+"</li>")
+}
 
 });
 

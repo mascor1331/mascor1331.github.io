@@ -6,7 +6,7 @@ var work = {
         "employer": "NYPIUA",
         "title": "IT Intern",
         "location": "100 William Street, New York, USA",
-        "dates": "15 May to 1 September 2015",
+        "dates": "15 May to 1 September 2017",
         "description": "Workload automation using BMC Control M, Web services testing using SOAPUI and RestAssured Java libraries"
     },
         {
@@ -126,9 +126,9 @@ for(var i=0; i< education.schools.length; i++){
     }
 
 
-
+//show all contact medias apart from location and mobile number
     for(contact in bio.contacts){
-        if(contact!="location"){
+        if(!(contact=="location" || contact=="Mobile")){
             $('#footerContacts').append(generateContactListElement(contact,bio.contacts[contact]));
             $('#topContacts').append(generateContactListElement(contact,bio.contacts[contact]));
         }

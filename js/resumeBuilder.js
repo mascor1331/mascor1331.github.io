@@ -122,9 +122,9 @@ for(var i=0; i< education.schools.length; i++){
 }
     $('#education').append('<h3>Online Classes</h3>');
 
-    for(var i=0; i< education.onlineCourses.length; i++){
-        $('#education').append(addOnlineCourse(education.onlineCourses[i]));
-    }
+//     for(var i=0; i< education.onlineCourses.length; i++){
+//         $('#education').append(addOnlineCourse(education.onlineCourses[i]));
+//     }
 
 
 //show all contact medias apart from location and mobile number

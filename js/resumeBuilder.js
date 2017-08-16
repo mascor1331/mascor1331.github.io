@@ -6,7 +6,7 @@ var work = {
         "employer": "NYPIUA",
         "title": "IT Intern",
         "location": "100 William Street, New York, USA",
-        "dates": "15 May to present",
+        "dates": "May 2017 to present",
         "description": "Workload automation using BMC Control M, Web services testing using SOAPUI and RestAssured Java libraries"
     },
         {

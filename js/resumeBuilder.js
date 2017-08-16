@@ -120,7 +120,7 @@ add education and online section
 for(var i=0; i< education.schools.length; i++){
     $('#education').append(addSchool(education.schools[i]));
 }
-    $('#education').append('<h3>Online Classes</h3>');
+//     $('#education').append('<h3>Online Classes</h3>');
 
 //     for(var i=0; i< education.onlineCourses.length; i++){
 //         $('#education').append(addOnlineCourse(education.onlineCourses[i]));

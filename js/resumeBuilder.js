@@ -6,7 +6,7 @@ var work = {
         "employer": "NYPIUA",
         "title": "IT Intern",
         "location": "100 William Street, New York, USA",
-        "dates": "15 May to 1 September 2017",
+        "dates": "15 May to present",
         "description": "Workload automation using BMC Control M, Web services testing using SOAPUI and RestAssured Java libraries"
     },
         {
@@ -75,13 +75,14 @@ var education = {
         "url": "http://www.rait.ac.in",
         "majors": ["Electronics Engineering"],
         "degree":"Bachelors"
-    }],
-    "onlineCourses": [{
-        "title": "Intro to JS",
-        "school": "Udacity",
-        "dates": "Summer 2017",
-        "url": "http://www.udacity.com"
     }]
+//     ,
+//     "onlineCourses": [{
+//         "title": "Intro to JS",
+//         "school": "Udacity",
+//         "dates": "Summer 2017",
+//         "url": "http://www.udacity.com"
+//     }]
 };
 
 $(document).ready(function(){

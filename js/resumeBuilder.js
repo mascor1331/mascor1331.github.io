@@ -66,14 +66,14 @@ var education = {
         "location": "New Brunswick",
         "degree dates": "September 2016 - May 2018",
         "url": "http://www.rutgers.edu",
-        "majors": ["Electrical and Computer Engineering"],
+        "majors": ["Electrical and Computer Engineering (3.9/4.0)"],
         "degree":"Masters"
     },{
         "name": "Ramrao Adik Institute of Technology",
         "location": "Nerul, Navi Mumbai, Maharashtra, India",
         "degree dates": "August 2010 - August 2014",
         "url": "http://www.rait.ac.in",
-        "majors": ["Electronics Engineering"],
+        "majors": ["Electronics Engineering (3.5/4.0)"],
         "degree":"Bachelors"
     }]
 //     ,
